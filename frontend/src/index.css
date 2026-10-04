@@ -11142,3 +11142,45 @@ body {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+/* Super Admin Theme Variables */
+:root {
+  --sa-bg: #F5F7F2;
+  --sa-surface: #FFFFFF;
+  --sa-surface-2: #FFFFFF;
+  --sa-border: #DAF1DE;
+  --sa-text: #051F20;
+  --sa-text-sec: #163832;
+  --sa-text-muted: #5b7973;
+  --sa-nav-bg: #DAF1DE;
+  --sa-nav-text: #0B2B26;
+  --sa-accent: #168B52;
+  --sa-success: #168B52;
+  --sa-warning: #E85D0B;
+  --sa-chart: #3B82F6;
+}
+
+[data-sa-theme="dark"] {
+  --sa-bg: #0B1F18;
+  --sa-surface: #10251C;
+  --sa-surface-2: #142B21;
+  --sa-border: #294237;
+  --sa-text: #F1F5F0;
+  --sa-text-sec: #A4B5AA;
+  --sa-text-muted: #788C80;
+  --sa-nav-bg: #E4F3E8;
+  --sa-nav-text: #238456;
+  --sa-accent: #168B52;
+  --sa-success: #2CA66A;
+  --sa-warning: #E85D0B;
+  --sa-chart: #83B6E8;
+}
+
+[data-sa-theme] h1,
+[data-sa-theme] h2,
+[data-sa-theme] h3,
+[data-sa-theme] h4,
+[data-sa-theme] h5,
+[data-sa-theme] h6 {
+  color: var(--sa-text);
+}

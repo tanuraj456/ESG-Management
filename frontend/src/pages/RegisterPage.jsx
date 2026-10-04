@@ -9,6 +9,8 @@ const RegisterPage = () => {
     adminName: '',
     email: '',
     phone: '',
+    industry: '',
+    otherIndustry: '',
     password: '',
     confirmPassword: ''
   });
@@ -77,6 +79,9 @@ const RegisterPage = () => {
     }
 
     if (!formData.phone.trim()) newErrors.phone = 'Required';
+    
+    if (!formData.industry) newErrors.industry = 'Required';
+    if (formData.industry === 'Other' && !formData.otherIndustry.trim()) newErrors.otherIndustry = 'Required';
 
     if (!formData.password) {
       newErrors.password = 'Required';
@@ -343,6 +348,52 @@ const RegisterPage = () => {
                   />
                   {errors.phone && <span className="absolute -bottom-5 right-0 text-[10px] text-red-400">{errors.phone}</span>}
                 </div>
+              </div>
+
+              {/* Industry */}
+              <div className="flex flex-col gap-8">
+                <div className="flex flex-col relative group">
+                  <label htmlFor="industry" className="text-xs text-white/60 mb-1 absolute -top-5 left-0 transition-all group-focus-within:text-white">
+                    Industry
+                  </label>
+                  <select 
+                    id="industry" 
+                    name="industry"
+                    className="w-full bg-transparent border-0 border-b border-white/30 pb-2 text-white focus:outline-none focus:border-white focus:ring-0 transition-colors cursor-pointer appearance-none"
+                    value={formData.industry}
+                    onChange={handleInputChange}
+                  >
+                    <option value="" disabled className="text-black bg-gray-100">Select an industry</option>
+                    <option value="Manufacturing" className="text-black bg-white">Manufacturing</option>
+                    <option value="Technology" className="text-black bg-white">Technology</option>
+                    <option value="Logistics" className="text-black bg-white">Logistics</option>
+                    <option value="Energy" className="text-black bg-white">Energy</option>
+                    <option value="Other" className="text-black bg-white">Other</option>
+                  </select>
+                  {/* Custom dropdown arrow */}
+                  <div className="pointer-events-none absolute right-0 top-1 text-white/50">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                  </div>
+                  {errors.industry && <span className="absolute -bottom-5 right-0 text-[10px] text-red-400">{errors.industry}</span>}
+                </div>
+
+                {formData.industry === 'Other' && (
+                  <div className="flex flex-col relative group animate-fade-up">
+                    <label htmlFor="otherIndustry" className="text-xs text-white/60 mb-1 absolute -top-5 left-0 transition-all group-focus-within:text-white">
+                      Please specify your industry
+                    </label>
+                    <input 
+                      type="text" 
+                      id="otherIndustry" 
+                      name="otherIndustry"
+                      className="w-full bg-transparent border-0 border-b border-white/30 pb-2 text-white placeholder-white/30 focus:outline-none focus:border-white focus:ring-0 transition-colors"
+                      placeholder="Enter industry name"
+                      value={formData.otherIndustry}
+                      onChange={handleInputChange}
+                    />
+                    {errors.otherIndustry && <span className="absolute -bottom-5 right-0 text-[10px] text-red-400">{errors.otherIndustry}</span>}
+                  </div>
+                )}
               </div>
 
               {/* Passwords */}
