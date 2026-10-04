@@ -11184,3 +11184,594 @@ body {
 [data-sa-theme] h6 {
   color: var(--sa-text);
 }
+
+/* =========================================
+   ESG INITIATIVES
+========================================= */
+
+.initiatives-page {
+  color: var(--text-primary);
+}
+
+.initiative-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.initiative-stat-card,
+.initiative-card,
+.settings-section,
+.settings-sidebar {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.initiative-stat-card {
+  padding: 22px;
+}
+
+.initiative-stat-card span,
+.initiative-stat-card small {
+  color: var(--text-secondary);
+}
+
+.initiative-stat-card h2 {
+  font-size: 30px;
+  margin: 12px 0 6px;
+  color: var(--text-primary);
+}
+
+.initiative-toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.initiative-toolbar input,
+.initiative-toolbar select,
+.initiative-modal input,
+.initiative-modal select,
+.initiative-modal textarea {
+  background: var(--surface-secondary);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  color: var(--text-primary);
+  padding: 12px 14px;
+  font: inherit;
+}
+
+.initiative-toolbar input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.initiative-toolbar select {
+  min-width: 160px;
+}
+
+.initiative-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.initiative-card {
+  padding: 22px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.initiative-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+}
+
+.initiative-card-top,
+.initiative-meta,
+.initiative-progress-heading,
+.initiative-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.initiative-category {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.initiative-card h3 {
+  margin: 18px 0 10px;
+  font-size: 19px;
+}
+
+.initiative-card > p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  min-height: 70px;
+}
+
+.initiative-meta {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.initiative-meta span {
+  color: var(--text-secondary);
+}
+
+.initiative-meta strong {
+  text-align: right;
+}
+
+.initiative-progress-heading {
+  margin: 18px 0 10px;
+  font-size: 13px;
+}
+
+.initiative-progress-track {
+  height: 8px;
+  background: var(--progress-bg);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.initiative-progress-fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+.initiative-actions {
+  margin-top: 18px;
+}
+
+.initiative-actions select {
+  background: var(--surface-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px;
+}
+
+.initiative-empty {
+  text-align: center;
+  padding: 50px 20px;
+  color: var(--text-secondary);
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+}
+
+.initiative-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.initiative-modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 26px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  color: var(--text-primary);
+}
+
+.initiative-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.initiative-modal-header h2 {
+  margin: 0;
+}
+
+.initiative-modal-header button {
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.initiative-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.initiative-modal label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.initiative-modal textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.initiative-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.initiative-detail-list {
+  margin: 20px 0;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* =========================================
+   EMPLOYEE SETTINGS
+========================================= */
+
+.employee-settings-page {
+  color: var(--text-primary);
+}
+
+.settings-layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 22px;
+  margin-top: 24px;
+  align-items: start;
+}
+
+.settings-sidebar {
+  padding: 20px;
+}
+
+.settings-user-card {
+  text-align: center;
+  padding: 10px 0 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.settings-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.settings-user-card h3 {
+  margin: 0 0 6px;
+}
+
+.settings-user-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.settings-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 20px;
+}
+
+.settings-tabs button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--text-secondary);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.settings-tabs button:hover,
+.settings-tabs button.active {
+  background: var(--surface-secondary);
+  color: var(--primary);
+}
+
+.settings-tabs button.active {
+  font-weight: 700;
+}
+
+.settings-content {
+  min-width: 0;
+}
+
+.settings-section {
+  padding: 28px;
+}
+
+.settings-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 22px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.settings-section-heading h2 {
+  margin: 0 0 7px;
+  font-size: 21px;
+}
+
+.settings-section-heading p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 14px;
+}
+
+.settings-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.settings-field label {
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.settings-field input,
+.settings-field textarea,
+.settings-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  background: var(--surface-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  font: inherit;
+  outline: none;
+}
+
+.settings-field input:focus,
+.settings-field textarea:focus,
+.settings-field select:focus {
+  border-color: var(--primary);
+}
+
+.settings-field input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.settings-field textarea {
+  resize: vertical;
+}
+
+.settings-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.settings-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+
+.settings-option-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.settings-option h4 {
+  margin: 0 0 7px;
+  font-size: 15px;
+}
+
+.settings-option p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.settings-switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 25px;
+  flex-shrink: 0;
+}
+
+.settings-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.settings-switch span {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  background: var(--border);
+  border-radius: 30px;
+  transition: 0.25s;
+}
+
+.settings-switch span::before {
+  content: "";
+  position: absolute;
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.25s;
+}
+
+.settings-switch input:checked + span {
+  background: var(--primary);
+}
+
+.settings-switch input:checked + span::before {
+  transform: translateX(21px);
+}
+
+.settings-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+}
+
+.settings-security-note {
+  background: var(--surface-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  margin-top: 28px;
+}
+
+.settings-security-note p {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.settings-message {
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.settings-message.success {
+  background: rgba(46, 160, 100, 0.15);
+  color: #8EB69B;
+  border: 1px solid rgba(46, 160, 100, 0.3);
+}
+
+.settings-message.error {
+  background: rgba(220, 70, 70, 0.12);
+  color: #ef9090;
+  border: 1px solid rgba(220, 70, 70, 0.3);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .initiative-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .settings-tabs button {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .initiative-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .initiative-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .settings-section {
+    padding: 18px;
+  }
+
+  .settings-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-field.full-width {
+    grid-column: auto;
+  }
+
+  .settings-tabs button {
+    flex: 1 1 40%;
+  }
+
+  .initiative-toolbar {
+    flex-direction: column;
+  }
+
+  .initiative-toolbar input,
+  .initiative-toolbar select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 420px) {
+  .initiative-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .initiative-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .settings-tabs button {
+    flex: 1 1 100%;
+  }
+}
